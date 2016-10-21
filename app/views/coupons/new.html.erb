@@ -1,0 +1,14 @@
+<h3>New Coupon Form</h3>
+<%= form_tag ('/coupons'), method: "post" do %>
+
+  <%= label_tag('coupon_code', "Code") %>
+  <%= text_field_tag :'coupon_code' %><br>
+ 
+  <%= label_tag('store', "Store") %>
+  <%= text_field_tag :'store' %><br>
+ 
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+ 
+  <%= submit_tag "Submit Coupon" %>
+<% end %>
+
